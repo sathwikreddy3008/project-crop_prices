@@ -1,0 +1,17 @@
+
+homepage/templates/home.html
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block header %}Real time monitoring of crops prices{% endblock %}
+
+{% block content %}
+
+    {% if user.is_authenticated %}
+        <p>Hello, {{ user.username }}!</p>
+        <p>Explore our blog to access more features.</p>
+    {% else %}
+        <p>Feel free to explore our blog to access more features. Please login to access about the crops and prices.</p>
+    {% endif %}
+{% endblock %}
